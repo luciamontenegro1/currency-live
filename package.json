@@ -1,0 +1,15 @@
+{
+  "name": "currency-live",
+  "version": "1.0.0",
+  "description": "an app to track dollar changes and other currencies",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "body-parser": "^1.19.0"
+  }
+}
