@@ -21,4 +21,61 @@ async function main(){
     await app.listen(port);
     console.log('server listening on port ${port}');
 }
+
+app.get('/dolares', async (req, res) => {
+  try {
+      const response = await fetch('https://dolarapi.com/v1/dolares', {
+          method: 'GET',
+      });
+      const data = await response.json();
+      res.json(data);
+  } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Error fetching data' });
+  }
+});
+
+app.get('/dolares/blue/compra', async (req, res) => {
+  try {
+      const response = await fetch('https://dolarapi.com/v1/dolares', {
+          method: 'GET',
+      });
+      const data = await response.json();
+      const dolarBlue = data.find(entry => entry.casa === 'blue');
+      if(dolarBlue) {
+        res.json({ compra: dolarBlue.compra});
+      } else {
+        res.status(404).json({ error: 'Dolar blue no encontrado'});
+      }
+      res.json(dolarBlue);
+  } catch (error) {
+      console.error('Error:', error);
+      if (!res.headersSent) {
+       
+        res.status(500).json({ error: 'Error fetching data' });
+      }
+  }
+});
+
+app.get('/dolares/blue/venta', async (req, res) => {
+  try {
+      const response = await fetch('https://dolarapi.com/v1/dolares', {
+          method: 'GET',
+      });
+      const data = await response.json();
+      const dolarBlue = data.find(entry => entry.casa === 'blue');
+      if(dolarBlue) {
+        res.json({ venta: dolarBlue.venta});
+      } else {
+        res.status(404).json({ error: 'Dolar blue no encontrado'});
+      }
+      res.json(dolarBlue);
+  } catch (error) {
+    console.error('Error:', error);
+    if (!res.headersSent) {
+        res.status(500).json({ error: 'Error fetching data' });
+    }
+}
+});
+
 main();
