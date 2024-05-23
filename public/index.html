@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency live</title>
+    <title>Currency Live</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
-    hola mundo
+    <header>
+        <h1>Currency Live</h1>
+        <div class="menu">
+            <div class="menu-button">⋮</div>
+            <div class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#currency">Currency</a>
+                <a href="#statistics">Statistics</a>
+            </div>
+        </div>
+    </header>
+    <main>
+      <section id="home" class="home">
+        <h2>Bienvenido a la página de Cotización de Divisas</h2>
+
+        <div class="cubes">
+            <div class="cube"> USD DOLAR</div>
+            <div class="cube"> EU EURO</div>
+            <div class="cube"> GBP LIBRAS ESTERLINAS</div>
+            <div class="cube"> CHF FRANCO SUIZO</div>
+        </div>
+    </section>
+  
+    <section id="currency" class="exchange-rates">
+      <h2>Tipos de Cambio</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>Moneda</th>
+                  <th>Código</th>
+                  <th>Compra</th>
+                  <th>Venta</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Dólar Estadounidense</td>
+                  <td>USD</td>
+                  <td>20.00</td>
+                  <td>20.50</td>
+              </tr>
+              <tr>
+                  <td>Euro</td>
+                  <td>EUR</td>
+                  <td>24.00</td>
+                  <td>24.50</td>
+              </tr>
+              <tr>
+                  <td>Libra Esterlina</td>
+                  <td>GBP</td>
+                  <td>28.00</td>
+                  <td>28.50</td>
+              </tr>
+              <tr>
+                <td>Franco Suizo</td>
+                <td>CHF</td>
+                <td>28.00</td>
+                <td>28.50</td>
+            </tr>
+          </tbody>
+      </table>
+  </section>
+  
+
+ 
+    <section id="statistics" class="statistics">
+      <h2>Estadísticas</h2>
+      <p>Aquí puedes encontrar estadísticas detalladas sobre el comportamiento de las divisas.</p>
+      <!-- Aquí puedes agregar más contenido sobre estadísticas -->
+      <div class="cubestat">
+        <div class="cube1"> USD DOLAR</div>
+        </div>
+  </section>
+
+   </main>
+        
+
 </body>
 </html>
